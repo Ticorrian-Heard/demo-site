@@ -1,8 +1,9 @@
 .cards {
     padding: 4rem;
-    background: linear-gradient(177deg, rgb(0 0 0) 0%, rgb(7, 11, 38) 100%);
-    --tw-bg-opacity: 1;
-    background-color: rgb(15 23 42/var(--tw-bg-opacity));
+    /* background: linear-gradient(177deg, rgb(0 0 0) 0%, rgb(7, 11, 38) 100%); */
+    background-color: white;
+    /* --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42/var(--tw-bg-opacity)); */
   }
   
   h1 {
@@ -31,20 +32,22 @@
     display: flex;
     flex: 1;
     margin: 0 2rem;
+    border: 1px solid rgb(56 125 255 / 6%);
     border-radius: 10px;
   }
 
   .cards__item:hover {
-    --tw-shadow: 0 2px 11px 0 #9a69f5;
+    --tw-shadow: 0 2px 11px 0 #b5b3b7;
     --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    transition: box-shadow 0.2s ease-in-out;
   }
   
   .cards__item__link {
     display: flex;
     flex-flow: column;
     width: 100%;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    /* box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17); */
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;

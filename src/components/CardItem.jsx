@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function CardItem(props) {
   return (
     <>
-        <li className='cards__item bg-white hover:bg-slate-300 active:bg-slate-500'>
+        <li className='cards__item bg-white active:bg-slate-200'>
           <Link className='cards__item__link' to={props.path} target="_blank">
               <figure className="cards__item__pic-wrap" data-category={props.label}>
                  <img src={props.src} alt="Bubbles" className="cards__item__img"/>

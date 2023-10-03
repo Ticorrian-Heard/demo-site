@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 100%;
     width: 100%;
     max-width: 1500px;
   }
@@ -96,6 +96,10 @@
   .menu-icon {
     display: none;
   }
+
+  .fold-center-logo {
+    padding-right: 0px;
+  }
   
   @media screen and (max-width: 960px) {
 
@@ -170,5 +174,36 @@
   @media screen and (max-width: 456px) {
     .menu-icon {
       right: 33px
+    }
+  }
+
+
+  @media screen and (max-width: 339px) {
+    .navbar {
+      height: 160px
+    }
+
+    .navbar-container {
+      flex-direction: column;
+    }
+
+    .logo-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+    }
+
+    .fold-center-logo {
+      padding-right: 20px;
+    }
+
+    .menu-icon {
+      right: 117px;
+    }
+
+    .nav-menu.active {
+      left: 4px;
     }
   }

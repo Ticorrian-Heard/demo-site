@@ -8,7 +8,7 @@ module.exports={
     mode: 'development',  
     target: 'web',
     context: __dirname,
-    entry: './index.js',
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].min.js',
@@ -41,7 +41,8 @@ module.exports={
         rules: [
             {
               test: /\.(js|jsx)$/,    
-              use:  'babel-loader' 
+              use:  'babel-loader',
+              exclude: /node_modules/ 
             },
             {
               test: /\.css$/i,

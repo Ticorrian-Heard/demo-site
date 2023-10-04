@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "scripts.js",
+  "homepage": "https://videosdk.dev",
   "scripts": {
-    "app": "webpack-dev-server .",
+    "app": "webpack-dev-server",
     "watch-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "Webpack .",
+    "build": "Webpack && npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "predeploy": "npm run build && cp CNAME dist/ && cp -R assets dist/ && cp ./src/styles.css dist/",
+    "deploy": "gh-pages -d dist",
     "start": "concurrently -p \"[{name}]\" -n \"app,watch-css\" -c \"cyan,green\" \"npm run app\"  \"npm run watch-css\" "
   },
   "author": "",
@@ -27,6 +30,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-jest": "^27.4.0",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.3",
     "path": "^0.12.7",
     "react": "^18.2.0",

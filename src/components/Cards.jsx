@@ -10,19 +10,19 @@ function Cards() {
             <div className="cards__wrapper">
                 <ul className="cards__items">
                     <CardItem 
-                        src="../../public/images/uitoolkits.png"
+                        src="../../assets/images/uitoolkits.png"
                         text="Pre-Built UI running the Zoom Video SDK under the hood. Ready for deployment!"
                         label="UIToolKit"
                         path="https://videosdk.dev/uitoolkit/"/>
 
                     <CardItem 
-                        src="../../public/images/bubbles.png"
+                        src="../../assets/images/bubbles.png"
                         text="Window full of video bubbles powered by our Video SDK!"
                         label="Bubbles"
                         path="https://videosdk.dev/bubbles/"/>
 
                     <CardItem 
-                        src="../../public/images/collage.png"
+                        src="../../assets/images/collage.png"
                         text="Create a collage just by speaking. Speech is turned into photos utilizing Zoom's Transcription AI!"
                         label="AI-Collage"
                         path="https://videosdk.dev/collage/ "/>

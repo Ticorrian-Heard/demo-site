@@ -11,6 +11,10 @@ function Navbar() {
     setClick(click => !click);
   }
 
+  const closeMobileMenu = () => {
+    setClick(click => false)
+  }
+
   useEffect(() => {
     NavbarRef.current.style.overflow = (NavbarRef.current.style.overflow === 'hidden') 
     ? "visible"
@@ -21,7 +25,7 @@ function Navbar() {
     <nav ref={NavbarRef} className="navbar">
         <div className="navbar-container">
             <div className="logo-container fold-center-logo">
-               <Link to="/" className='navbar-logo' onClick={handleClick}>
+               <Link to="/" className='navbar-logo' onClick={closeMobileMenu}>
                <div className='icon-container mr-1.5 bg-blue-500'>
                  <svg className='svg-pos' width="40" height="40" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                    <mask id="mask0_1253_31" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">

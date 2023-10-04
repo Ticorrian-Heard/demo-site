@@ -42,12 +42,12 @@ function Navbar() {
 
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li className='nav-item'>
-                    <Link to='/' className='nav-links' onClick={handleClick}>
-                        Tips
+                    <Link to='https://devforum.zoom.us/' target="_blank" className='nav-links' onClick={handleClick}>
+                        Dev Forum
                     </Link>
                     </li>
                     <li className='nav-item'>
-                    <Link to='https://github.com/zoom' className='nav-links' onClick={handleClick}>
+                    <Link to='https://github.com/zoom' target="_blank" className='nav-links' onClick={handleClick}>
                         GitHub
                     </Link>
                     </li>

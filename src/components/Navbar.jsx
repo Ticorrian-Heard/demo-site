@@ -26,7 +26,7 @@ function Navbar() {
         <div className="navbar-container">
             <div className="logo-container fold-center-logo">
                <Link to="/" className='navbar-logo' onClick={closeMobileMenu}>
-               <div className='icon-container mr-1.5 bg-blue-500'>
+               <div className='icon-container mr-1.5'>
                  <svg className='svg-pos' width="40" height="40" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                    <mask id="mask0_1253_31" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">
                    <path d="M11 11.5C11 12.3284 10.3284 13 9.5 13H3C1.3431 13 0 11.6569 0 10V4.5C0 3.6716 0.6716 3 1.5 3H8C9.6569 3 11 4.3431 11 6V11.5ZM14.7999 3.8999L12.5999 5.54991C12.2222 5.83321 11.9999 6.27781 11.9999 6.74991L12 9.24991C12 9.72201 12.2223 10.1666 12.6 10.4499L14.8 12.0999C15.2944 12.4707 16 12.1179 16 11.4999V4.49991C16 3.88181 15.2944 3.529 14.7999 3.8999Z" fill="#000001"/>

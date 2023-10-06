@@ -40,15 +40,17 @@
   }
 
   .icon-container {
-    width: 59px;
-    height: 51px;
-    border-radius: 20px;
+    background-color: #0A5BFE;
+    width: 62px;
+    height: 58px;
+    border-radius: 26px;
+    box-shadow: inset 0px -3px 2px -1px #646464;
   }
 
   .svg-pos {
     position: relative;
-    top: 5px;
-    right: -10px;
+    top: 8px;
+    right: -11px;
   }
   
   .fa-typo3 {

@@ -1,6 +1,15 @@
+@font-face {
+  font-family: "Happy Display";
+  src: url("../assets/fonts/HappyDisplay-Regular.otf") format("opentype"),
+}
+@font-face {
+  font-family: "Almaden Sans";
+  src: url("../assets/fonts/AlmadenSans-Medium.otf") format("opentype"),
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-weight: 600;
+  font-family: "Happy Display", "Almaden Sans", 'PT Sans', sans-serif;;
 }

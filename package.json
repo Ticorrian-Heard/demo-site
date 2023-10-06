@@ -6,9 +6,9 @@
   "homepage": "https://videosdk.dev",
   "scripts": {
     "app": "webpack-dev-server",
-    "watch-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "Webpack && npx tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "predeploy": "npm run build && cp CNAME dist/ && cp -R assets dist/ && cp ./src/styles.css dist/",
+    "watch-css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "Webpack && npx tailwindcss -i ./src/input.css -o ./src/output.css",
+    "predeploy": "npm run build && cp CNAME dist/ && cp -R assets dist/ && cp ./src/styles.css dist/ && cp ./src/output.css dist/",
     "deploy": "gh-pages -d dist",
     "start": "concurrently -p \"[{name}]\" -n \"app,watch-css\" -c \"cyan,green\" \"npm run app\"  \"npm run watch-css\" "
   },

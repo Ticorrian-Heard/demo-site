@@ -60,6 +60,7 @@
     width: 100%;
     padding-top: 67%;
     overflow: hidden;
+    font-family: 'Almaden Sans', sans-serif;
   }
   
   .fade-img {
@@ -108,6 +109,8 @@
     color: #252e48;
     font-size: 18px;
     line-height: 24px;
+    font-family: 'Almaden Sans', sans-serif;
+
   }
   
   @media only screen and (min-width: 1200px) {

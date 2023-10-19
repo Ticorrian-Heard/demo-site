@@ -1,5 +1,5 @@
 video {
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 100%;
     height: 100%;
     position: absolute;
@@ -8,18 +8,18 @@ video {
   
   .hero-container {
     /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-    height: 60vh;
+    height: 621px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); */
     object-fit: contain;
   }
   
   .hero-container > h1 {
-    color: #fff;
+    color: #1506067d;
     font-size: 100px;
     margin-top: -100px;
   }
@@ -30,13 +30,16 @@ video {
     font-size: 32px;
     font-family: 'Almaden Sans', sans-serif;
   }
-  
+
   .hero-btns {
     margin-top: 32px;
   }
   
   .hero-btns .btn {
     margin: 6px;
+    --tw-shadow: 0 2px 11px 0 #b5b3b7;
+    --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
   
   .fa-play-circle {
@@ -84,9 +87,46 @@ video {
     .hero-container {
       padding-top: 49px;
     }
+
+    video {
+      top: -132px;
+    }
   }
 
-  @media screen and (orientation:landscape) { 
+  @media screen and (max-width: 1300px) {
+    video {
+      top: -200px;
+    }
+    @media screen and (orientation:landscape) {
+      video {
+        top: -13px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    video {
+      top: -13px;
+    }
+    @media screen and (orientation:landscape) {
+      video {
+        top: -13px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    video {
+      top: -207px;
+    }
+    @media screen and (orientation:landscape) {
+      video {
+        top: -100px;
+      }
+    }
+  }
+
+  @media screen and (orientation:landscape) and (max-width: 1000px) { 
     .hero-container {
       padding-top: 90px;
     }

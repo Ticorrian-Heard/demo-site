@@ -78,7 +78,7 @@ function SubNav() {
                         1.888.799.9666
                     </Link>
                     </li>
-                    <li className='sub-nav-item sub-nav-links'>
+                    <li className='sub-nav-item bar-separate'>
                        <span>|</span>
                     </li>
                     <li className='sub-nav-item btn btn--primary' style={{height: '30px'}}>

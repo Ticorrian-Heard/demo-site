@@ -36,6 +36,18 @@
       margin: 0px 10px;
     }
 
+    .bar-separate{
+        color: white;
+        display: flex;
+        align-items: center;
+        font-family: "Almaden Sans";
+        font-size: .875rem;
+        font-weight: 500;
+        line-height: 1.1;
+        margin-left: 10px;
+        margin-right: 18px;
+      }
+
     .nav-links-container {
          width: 1500px;
     }

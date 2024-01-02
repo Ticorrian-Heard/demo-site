@@ -1,19 +1,24 @@
 :root {
-    --primary: #fff;
+    --primary: #0B5CFF;
+    --text-white: #FFFFFF;
 }
 
 .btn {
     padding: 8px 20px;
-    border-radius: 2px;
+    border-radius: 999px;
     outline: none;
     border: none;
     cursor: pointer;
     font-family: 'Almaden Sans', sans-serif;
 }
 
+.btn:hover {
+    background: #0050f0;
+}
+
 .btn--primary {
     background-color: var(--primary);
-    color: #242424;
+    color: var(--text-white);
 }
 
 .btn--transparent {

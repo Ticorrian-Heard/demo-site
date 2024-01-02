@@ -3,9 +3,33 @@ import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+export function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
 function Navbar() {
   const [click, setClick] = useState(false);
   const NavbarRef = useRef();
+  const { height, width } = useWindowDimensions();
 
   const handleClick = () => { 
     setClick(click => !click);
@@ -36,26 +60,53 @@ function Navbar() {
                </Link>
             </div>
             <div className="logo-container">
-               <div className="menu-icon" onClick={handleClick}>
-                <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>
+               <button type="button" className="menu-icon" onClick={handleClick}>
+
+                { click ? <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" fill="none">
+                             <mask id="mask0_8754_934" style={{maskType: "alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L6.58579 8L0.292893 14.2929C-0.0976311 14.6834 -0.0976311 15.3166 0.292893 15.7071C0.683417 16.0976 1.31658 16.0976 1.70711 15.7071L8 9.41421L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L9.41421 8L15.7071 1.70711C16.0976 1.31658 16.0976 0.683417 15.7071 0.292893C15.3166 -0.0976311 14.6834 -0.0976311 14.2929 0.292893L8 6.58579L1.70711 0.292893Z" fill="#000001"/>
+                             </mask>
+                             <g mask="url(#mask0_8754_934)">
+                             <rect width="25" height="25" fill="#131619"/>
+                             </g>
+                             </svg> 
+                        : <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512">
+                           <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                           </svg> 
+                        }
+                </button>
 
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                <li className='nav-item'>
-                    <Link to='https://devforum.zoom.us/' target="_blank" className='nav-links' onClick={handleClick}>
-                        Dev Forum
-                    </Link>
-                    </li>
-                    <li className='nav-item'>
-                    <Link to='https://github.com/zoom' target="_blank" className='nav-links' onClick={handleClick}>
-                        GitHub
-                    </Link>
-                    </li>
-                    <li className='nav-item'>
-                    <Link to='https://developers.zoom.us/docs/video-sdk/' target="_blank" className='nav-links' onClick={handleClick}>
-                        Docs
-                    </Link>
-                    </li>
+                  <div className='nav-item-container'>
+                     <li className='nav-item'>
+                         <Link to='https://devforum.zoom.us/' target="_blank" className='nav-links' onClick={handleClick}>
+                             Dev Forum
+                         </Link>
+                         </li>
+                         <li className='nav-item'>
+                         <Link to='https://github.com/zoom' target="_blank" className='nav-links' onClick={handleClick}>
+                             GitHub
+                         </Link>
+                         </li>
+                         <li className='nav-item'>
+                         <Link to='https://developers.zoom.us/docs/video-sdk/' target="_blank" className='nav-links' onClick={handleClick}>
+                             Docs
+                         </Link>
+                         </li>
+                  </div>
+                  {click && width < 960 && <div className='nav-link2-container'>
+                      <ul className='nav-link2-list'>
+                       <li className='nav-link2'><Link to='https://support.zoom.com/hc' target="_blank">
+                               Support
+                           </Link></li>
+                       <li className='nav-link2'><Link to='tel:1.888.799.9666'>
+                               1.888.799.9666
+                           </Link></li>
+                       <li className='nav-link2'><Link className="btn btn--primary" to='https://zoom.us/signup' target="_blank">
+                               Sign Up
+                           </Link></li>
+                     </ul>
+                  </div> }
             </ul> 
             </div>
         </div>

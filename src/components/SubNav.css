@@ -6,12 +6,10 @@
   .sub-navbar {
       --tw-bg-opacity: 1;
       background-color: #00031f;
-      height: 2.5rem;
+      height: 41px;
       display: flex;
       font-size: 1.2rem;
       position: sticky;
-      top: 0;
-      z-index: 999;
       justify-content: center;
     }
 

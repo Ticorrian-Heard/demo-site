@@ -78,10 +78,7 @@ function SubNav() {
                         1.888.799.9666
                     </Link>
                     </li>
-                    <li className='sub-nav-item bar-separate'>
-                       <span>|</span>
-                    </li>
-                    <li className='sub-nav-item btn btn--primary' style={{height: '30px'}}>
+                    <li className='sub-nav-item btn btn--primary' style={{height: '30px', marginLeft: "10px"}}>
                     <Link to='https://zoom.us/signup' target="_blank" className='sub-nav-links'>
                         Sign Up
                     </Link>
